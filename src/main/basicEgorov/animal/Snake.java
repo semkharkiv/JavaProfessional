@@ -1,0 +1,7 @@
+package main.basicEgorov.animal;
+
+public class Snake extends Animal {
+    public Snake(String name, String color, int age) {
+        super(name, color, age);
+    }
+}
