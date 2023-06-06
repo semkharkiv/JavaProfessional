@@ -24,7 +24,6 @@ class ServiceTest {
 
     @Test
     void m1TestWithAuthorAndYear() {
-        Gen gen = new Gen();
         int year = 1985;
         List<Book> mockBooksList = new ArrayList<>();
         Mockito.when(gen.get()).thenReturn(mockBooksList);
@@ -35,7 +34,6 @@ class ServiceTest {
 
     @Test
     void testM1TestWithBook() {
-        Gen gen = new Gen();
         List<Book> mockBooksList = new ArrayList<>();
         Mockito.when(gen.get()).thenReturn(mockBooksList);
 
