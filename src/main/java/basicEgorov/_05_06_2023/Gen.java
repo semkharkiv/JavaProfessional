@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Gen {
-    List<Book> get() {
+    public  List<Book> get() {
        Author author1 = new Author("Author1",false,33);
        Author author2 = new Author("Author2",true,35);
        Author author3 = new Author("Author3",true,40);
