@@ -17,9 +17,11 @@ public class Shop implements Runnable{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
-            System.out.println("Магазин продал продукты");
 
+            }
+            System.out.println("после продажи остаток продукта - " + (delivery.getFactory().getProductCount()-1));
+
+            System.out.println("Магазин продал продукты");
             delivery.notify();
             }
         }

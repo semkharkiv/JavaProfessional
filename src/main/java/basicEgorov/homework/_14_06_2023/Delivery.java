@@ -30,7 +30,6 @@ public class Delivery implements Runnable {
                 }
                 int productCount = factory.getProductCount();
                 factory.setProductCount(productCount - 1);
-                System.out.println("после продажи остаток продукта - " + (productCount-1));
                 factory.notify();
             }
         }
