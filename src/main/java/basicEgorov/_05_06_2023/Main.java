@@ -9,6 +9,5 @@ public class Main {
         Service service = new Service(gen);
 
         System.out.println(service.m1(new Author("Author1",false,33), 1985));
-
-    }
+       }
 }
