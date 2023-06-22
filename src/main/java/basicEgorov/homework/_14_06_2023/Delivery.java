@@ -28,8 +28,7 @@ public class Delivery implements Runnable {
                         e.printStackTrace();
                     }
                 }
-                int productCount = factory.getProductCount();
-                factory.setProductCount(productCount - 1);
+
                 factory.notify();
             }
         }
