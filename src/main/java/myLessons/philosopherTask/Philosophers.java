@@ -1,4 +1,4 @@
-package myLessons.philosophNikalaj;
+package myLessons.philosopherTask;
 
 public class Philosophers implements Runnable {
     String name;
