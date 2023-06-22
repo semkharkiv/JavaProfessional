@@ -1,26 +1,31 @@
-package philosophNikalaj;
-
-import myProject.internetStore.Main;
+package myLessons.philosophNikalaj;
 
 public class Philosophers implements Runnable {
-
+    String name;
     Fork forkLeft;
     Fork forkRight;
 
     Thread th;
 
-    public Philosophers(Fork forkLeft, Fork forkRight) {
+    public Philosophers(String name,Fork forkLeft, Fork forkRight) {
+        this.name = name;
         this.forkLeft = forkLeft;
         this.forkRight = forkRight;
         this.th = new Thread(this);
         th.start();
     }
 
+    @Override
+    public String toString() {
+        return "Philosophers " +
+                 name ;
+    }
+
     public void think() {
             try {
                 if (Thread.currentThread().isAlive()){
-                    Thread.sleep((long) (Math.random() * 2000));
-                System.err.println( " While one philosopher is eating, the others are contemplating something.... ");
+                    Thread.sleep((long) (Math.random() * 1000));
+                System.err.println("While " + this + " is eating, the others are contemplating something.... ");
                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -30,17 +35,17 @@ public class Philosophers implements Runnable {
     @Override
     public void run() {
         while (true) {
-            think();
             try {
                 Thread.sleep((long) (Math.random() * 1000));
                 synchronized (forkLeft) {
                     synchronized (forkRight) {
-                        System.out.println(Thread.currentThread().getName() + " кушает");
-
+                        System.out.println(this + " eats");
                         Thread.sleep((long) (Math.random() * 1000));
                         forkLeft.notify();
                         forkRight.notify();
                     }
+                    Thread.sleep(1000);
+                    think();
                     forkLeft.wait();
                 }
             } catch (InterruptedException e) {
