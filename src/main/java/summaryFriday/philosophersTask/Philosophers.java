@@ -89,7 +89,7 @@ public class Philosophers {
         Philosopher philosopher2 = new Philosopher("Socrates", fork2, fork3);
         Philosopher philosopher3 = new Philosopher("Aristotle", fork3, fork4);
         Philosopher philosopher4 = new Philosopher("Konfuci", fork4, fork5);
-        Philosopher philosopher5 = new Philosopher("Laozi", fork5, fork1);
+        Philosopher philosopher5 = new Philosopher("Laozi", fork1, fork5);
 
         new Thread(philosopher1::atTheTable).start();
         new Thread(philosopher2::atTheTable).start();

@@ -13,10 +13,9 @@ public class RegexTask {
         String input = "Contact us at info@example.com or support@example.com";
         String replacement = "REDACTED";
 
-//        String regex="\\w\\W\\w\\.(com)";  фигня
-        String regex = "\\w+\\@\\w+.\\w{2,4}"; //Соня 5
+        String regex = "\\w+\\@\\w+.\\w{2,4}";
 
-//        String regex = "\\b[\\w.%-]+@[\\w.-]+\\.[A-Za-z]{2,4}\\b"; Михаил 4
+//        String regex = "\\b[\\w.%-]+@[\\w.-]+\\.[A-Za-z]{2,4}\\b";
 
         String output = input.replaceAll(regex, replacement);
         System.out.println(output);
@@ -78,7 +77,11 @@ public class RegexTask {
      * String ipAddress = "192.168.0.1";
      */
     private static boolean isValidIP(String IP) {
-        String regex = "^[1-9]{3}\\.[0-9]{3}\\.\\d\\.\\d";
+
+        String regex="((25[0-5]|2[0-4]\\d|[01]?\\d?\\d)" +
+                "(\\.)){3}" +
+                "(25[0-5]|2[0-4]\\d|[01]?\\d?\\d)";
+
         return IP.matches(regex);
     }
 

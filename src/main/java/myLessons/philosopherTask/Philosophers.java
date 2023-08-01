@@ -1,9 +1,9 @@
 package myLessons.philosopherTask;
 
 public class Philosophers implements Runnable {
-    String name;
-    Fork forkLeft;
-    Fork forkRight;
+    private String name;
+    private final Fork forkLeft;
+    private final Fork forkRight;
 
     Thread th;
 
