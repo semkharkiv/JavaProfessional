@@ -1,6 +1,5 @@
 package basicEgorov._05_06_2023;
 
-
 public class Book {
     private Author author;
     private String title;
@@ -16,14 +15,9 @@ public class Book {
         return author;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public int getYearIssue() {
         return yearIssue;
     }
-
 
     @Override
     public String toString() {

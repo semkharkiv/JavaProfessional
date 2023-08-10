@@ -14,6 +14,6 @@ public class BankCardsGeneration {
     }
 
     public String generateCard(){
-        return generateRandomNumber(27);
+        return generateRandomNumber(24);
     }
 }
