@@ -2,6 +2,7 @@ package basicEgorov._10_08_2023;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import summaryFriday._11_08_2023.TestExample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,4 +75,6 @@ class LibraryTest {
             library.searchByYear(-1);
         });
     }
+
+
 }
