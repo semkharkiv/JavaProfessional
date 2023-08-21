@@ -1,5 +1,6 @@
 package basicEgorov._15_08_23;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -9,17 +10,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
 
 class OrderTest {
-    @Mock
-    Person person;
-
     @InjectMocks
     Order order;
+    @Mock
+    Person person;
+    @Mock
+    List<Product> products;
+
 
     @Test
-    void calculateTotalPrice() {
-        List<Product> products = new ArrayList<>();
+    void calculateTotalPriceTest() {
+        products = new ArrayList<>();
+
         products.add(new Product("Product1", 10.0,15,"category"));
         products.add(new Product("Product2", 20.0,16,"category"));
         products.add(new Product("Product3", 15.0,20,"category"));
@@ -33,11 +38,14 @@ class OrderTest {
         assertEquals(expectedTotalPrice, actualTotalPrice);
     }
 
+    //todo доделать
     @Test
-    void getNumberOfProducts() {
+    void getNumberOfProductsTest() {
+
+
     }
 
     @Test
-    void isOrderExpired() {
+    void isOrderExpiredText() {
     }
 }

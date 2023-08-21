@@ -72,6 +72,10 @@ public class Order implements Comparable<Order>{
                 .sum();
     }
 
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
     public boolean isOrderExpired(){
         LocalDate currentDate = LocalDate.now();
         return currentDate.isAfter(orderDate);
