@@ -104,4 +104,20 @@ public class Product {
     public void setDebt(boolean debt) {
         isDebt = debt;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", category='" + category + '\'' +
+                ", name='" + name + '\'' +
+                ", factory='" + factory + '\'' +
+                ", quantity=" + quantity +
+                ", isPacked=" + isPacked +
+                ", isAdv=" + isAdv +
+                ", price=" + price +
+                ", margin=" + margin +
+                ", isDebt=" + isDebt +
+                '}';
+    }
 }

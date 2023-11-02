@@ -9,13 +9,14 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class StoreJsonParser {
+public final class StoreJsonParser {
+    private StoreJsonParser() {}
+
     public static Store createStoreFromJSONFIle(String path) {
         Set<Product> products = new HashSet<>();
         String json = readFromFile(path);
         JSONArray jsonArray = new JSONArray(json);
-
-        for (int i = 0; i < json.length(); i++) {
+        for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject object = jsonArray.getJSONObject(i);
             Product product = parseProductFromJSON(object);
             products.add(product);
